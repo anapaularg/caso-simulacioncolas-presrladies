@@ -13,9 +13,9 @@ library(RColorBrewer)
 # Working Directory donde se encuentra este archivo
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
-df_admision <- read_xlsx("DataTiempos.xlsx", sheet = 1)
-df_egresos <- read_xlsx("DataTiempos.xlsx", sheet = 2)
-df_centros <- read_xlsx("DataPersonal.xlsx", sheet = 1)
+df_admision <- read_xlsx("Inputs/DataTiempos.xlsx", sheet = 1)
+df_egresos <- read_xlsx("Inputs/DataTiempos.xlsx", sheet = 2)
+df_centros <- read_xlsx("Inputs/DataPersonal.xlsx", sheet = 1)
 
 df_centros <- df_centros %>%
   select("SEDE", "Tipo centro", "PPTO 2021 ADM") %>%
